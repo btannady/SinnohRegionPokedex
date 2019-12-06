@@ -15,38 +15,33 @@ def findWithName(userSearch):
     
     Returns
     -------
-    (doesn't return anything, void function; simply prints data corresponding to pokemon to the user)
+    pokeDataOutput : List of strings
+        List of string containing information of pokemon data to later display to user
     
     """
     
-    print("\n**********************************")
+    # prepares the output list to return
+    pokeDataOutput = []
     
-    #displays the pokemon data
+    # appends the pokemon that fit the search criteria into our output list
     for monster in pokedex:
         if monster.getPokeName() == userSearch.lower():
             
-            # display the pokemon name
-            print("Pokémon: ", end = '')
-            print(monster.getPokeName().capitalize())
+            # sets the first element of the list to string of pokemon name
+            pokeDataOutput.append(monster.getPokeName().capitalize())
             
-            # display the pokemon type(s)
-            print("Type: ", end = '')
-            commaCounter = len(monster.getPokeType())
+            # sets the second and third element of the list to string(s) of the pokemon type(s)
             for item in monster.getPokeType():
-                print(item.capitalize() + " ", end = '')
-            print("")
+                pokeDataOutput.append(item.capitalize())
                 
-            # display the pokemon Ndex    
-            print("National Index: #", end = '')
-            print(monster.getPokeNdex())
+            # sets the last element of the list to string of pokemon Ndex  
+            pokeDataOutput.append(str(monster.getPokeNdex()))
             
-            print("\n**********************************")
-            return
+            return pokeDataOutput
             
     # if we reached here, then that means the userSearch input was not found in pokedex database
-    print("The Pokémon name [" + userSearch + "] was not found in the Pokédex database...")
-    
-    print("\n**********************************")
+    pokeDataOutput = ["not found"]
+    return pokeDataOutput
     
     
 #----------------------------------------------------------------------------------------------------
@@ -89,7 +84,6 @@ def findWithType(userSearch1 = "", userSearch2 = ""):
             
                     # display the pokemon type(s)
                     print("Type: ", end = '')
-                    commaCounter = len(monster.getPokeType())
                     for item in monster.getPokeType():
                         print(item.capitalize() + " ", end = '')
                     print("")
@@ -155,50 +149,46 @@ def findWithNdex(userSearch):
     
     Parameters
     ----------
-    userSearch : string
+    userSearch : integer
         String to determine what pokemon to search for in data set
     
     Returns
     -------
-    (doesn't return anything, void function; simply prints data corresponding to pokemon to the user)
+    pokeDataOutput : List of strings
+        List of string containing information of pokemon data to later display to user
     
     """
     
-    print("\n**********************************")
+    # prepares the output list to return
+    pokeDataOutput = []
+    
     
     # check that user input a valid integer value
     try:
         intTester = int(userSearch)
     except ValueError:
-        print("The Pokémon National Index [" + userSearch + "] was not found in the Pokédex database...")
-        print("\n**********************************")
-        return
+        pokeDataOutput.append("invalid data type")
+        return pokeDataOutput
+  
     
-    #displays the pokemon data
+    # appends the pokemon that fit the search criteria into our output list
     for monster in pokedex:
         if monster.getPokeNdex() == int(userSearch):
             
-            # display the pokemon name
-            print("Pokémon: ", end = '')
-            print(monster.getPokeName().capitalize())
+            # sets the first element of the list to string of pokemon name
+            pokeDataOutput.append(monster.getPokeName().capitalize())
             
-            # display the pokemon type(s)
-            print("Type: ", end = '')
-            commaCounter = len(monster.getPokeType())
+            # sets the second and third element of the list to string(s) of the pokemon type(s)
             for item in monster.getPokeType():
-                print(item.capitalize() + " ", end = '')
-            print("")
+                pokeDataOutput.append(item.capitalize())
                 
-            # display the pokemon Ndex    
-            print("National Index: #", end = '')
-            print(monster.getPokeNdex())
+            # sets the last element of the list to string of pokemon Ndex  
+            pokeDataOutput.append(str(monster.getPokeNdex()))
             
-            print("\n**********************************")
-            return
+            return pokeDataOutput
             
     # if we reached here, then that means the userSearch input was not found in pokedex database
-    print("The Pokémon National Index [" + userSearch + "] was not found in the Pokédex database...")
-    
-    print("\n**********************************")
+    pokeDataOutput = ["not found"]
+    return pokeDataOutput
 
 

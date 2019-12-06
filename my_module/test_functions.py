@@ -4,9 +4,9 @@ from my_module.functions import *
 # test the findWithName function
 def test_findWithName():
     
-    assert(findWithName("pikachu") == "PikachuElectric25")        # test for all lowercase input
-    assert(findWithName("GARCHOMP") == "GarchompDragonGround445") # test for all uppercase input
-    assert(findWithName("mAgIKArP") == "MagikarpWater129")        # test for mixed-casing input
+    assert(findWithName("pikachu") == ["Pikachu", "Electric", "", "25"])        # test for all lowercase input
+    assert(findWithName("GARCHOMP") == ["Garchomp", "Dragon", "Ground", "445"]) # test for all uppercase input
+    assert(findWithName("mAgIKArP") == ["Magikarp", "Water", "", "129"])        # test for mixed-casing input
     
     # test invalid pokemon names
     assert(findWithName("mrPoopyHead321") == "The Pokémon name [myPoopyHead321] was not found in the Pokédex database...")
