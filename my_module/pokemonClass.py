@@ -1,8 +1,27 @@
 # CLASS DEFINITIONS
 
 #----------------------------------------------------------------------------------------------------
-# class responsible of holding each individual Pokemon's data by species
 class Pokemon:
+    
+    """ class responsible of holding each individual Pokemon's data by species
+    
+    Getter methods
+    --------------
+    getPokeName : string
+        Returns the string of what the name of the pokemon is
+    getPokeType : string
+        Returns the string of what type the pokemon is
+    getPokeNdex : integer
+        Returns the integer of what the national index number of the pokemon is
+    
+    Setter methods
+     --------------
+    setPokeType : void
+        Sets the pokemon's type to a different value
+    setPokeNdex : void
+        Sets the pokemon's nation index number to a different value
+    
+    """
     
     def __init__(self, pokeName, pokeType, pokeNdex):
         self.pokeName = pokeName # pokemon's name; expects a string
@@ -24,11 +43,9 @@ class Pokemon:
     #setter methods
     def setPokeType(self, newPokeType):
         self.pokeType = newPokeType
-        print("[" + self.pokeName + "'s TYPE has been successfully changed!]")
         
     def setPokeNdex(self, newPokeNdex):
         self.pokeNdex = newPokeNdex
-        print("[" + self.pokeName + "'s NATIONAL INDEX has been successfully changed!]")
         
     #---------------------------------------------
                 
