@@ -16,15 +16,18 @@ Meeting the Grading Requirements:
 
     1 Jupyter notebook
         -ProjectNotebook.ipynb
+        
     4 python files
         -pokemonClass.py
         -pokemonObjects.py
         -functions.py
         -test_functions.py
+        
     3 original functions
         -findWithName()
         -findWithType()
         -findWithNdex()
+        
     1 original class, with 5 original methods
         -Pokemon
             *getPokemonName()
@@ -32,6 +35,7 @@ Meeting the Grading Requirements:
             *getPokemonNdex()
             *setPokemonType()
             *setPokemonNdex()
+            
     3 original function tests
         -test_findWithName()
         -test_findWithType()
