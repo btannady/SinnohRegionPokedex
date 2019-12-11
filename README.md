@@ -44,16 +44,18 @@ Meeting the Grading Requirements:
 
 EXTRA CREDIT:
 
-    - In my python project, I wanted to make my pokemon program feel more lively and inviting (almost like a game), 
-    so I learned how to add background music from watching tutorials online. If you run the main program, you will 
-    instantly notice (if you have your volume loud enough) that peaceful pokemon music begins playing in the background 
-    as you utilize the pokemon program hahaha! 
-    - Other than self-teaching myself how to use coding concepts not taught in class, I also have uploaded my project 
-    onto Github. In doing so, I'd make sure to maintain a good version-control routine thoughout the development of 
-    this project.
+    - In my python project, I wanted to make my pokemon program feel more lively and inviting 
+    (almost like a game), so I learned how to add background music from watching tutorials 
+    online. If you run the main program, you will instantly notice (if you have your volume loud 
+    enough) that peaceful pokemon music begins playing in the background as you utilize the 
+    pokemon program hahaha! 
+    - Other than self-teaching myself how to use coding concepts not taught in class, I also 
+    have uploaded my project onto Github. In doing so, I'd make sure to maintain a good 
+    version-control routine thoughout the development of this project.
     
     
 
 Overall, I really had a great time working on this project. This was my first big python project so I really hope you enjoy it! 
+
 Gotta catchem' all!!
  
