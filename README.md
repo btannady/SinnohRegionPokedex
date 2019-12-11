@@ -13,8 +13,10 @@ There are 3 kinds of search features offered by this Pokedex program:
   
   
 Meeting the Grading Requirements:
+
     1 Jupyter notebook
         -ProjectNotebook.ipynb
+        
     4 python files
         -pokemonClass.py
         -pokemonObjects.py
