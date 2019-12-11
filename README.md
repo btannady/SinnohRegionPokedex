@@ -16,7 +16,6 @@ Meeting the Grading Requirements:
 
     1 Jupyter notebook
         -ProjectNotebook.ipynb
-        
     4 python files
         -pokemonClass.py
         -pokemonObjects.py
