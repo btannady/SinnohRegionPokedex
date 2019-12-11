@@ -6,17 +6,17 @@ from my_module.pokemonObjects import *
 #----------------------------------------------------------------------------------------------------
 def findWithName(userSearch):
     
-    """ Spits out pokemon data corresponding to the inputted Pokemon name
+    """ Spits out pokemon data corresponding to the inputted Pokemon's name
     
     Parameters
     ----------
     userSearch : string
-        String to determine what pokemon to search for in data set
+        String to determine what pokemon name to search for in our database
     
     Returns
     -------
     pokeDataOutput : List of strings
-        List of string containing information of pokemon data to later display to user
+        List of strings containing data of the pokemon we were searching for
     
     """
     
@@ -47,19 +47,20 @@ def findWithName(userSearch):
 #----------------------------------------------------------------------------------------------------
 def findWithType(userSearch1 = "", userSearch2 = ""):
     
-    """ Spits out pokemon data corresponding to the inputted Pokemon type(s)
+    """ Spits out pokemon data corresponding to the inputted Pokemon's type(s)
     
     Parameters
     ----------
     userSearch1 : string
-        String to determine what pokemon to search for in data set
+        String to determine what pokemon type to search for in our database
     userSearch2 : string
-        String to determine what pokemon to search for in data set
+        String to determine what pokemon type to search for in our database; 
+        if userSearch2 is left blank then this function will only make a search for pokemon with userSearch1 types
     
     Returns
     -------
     pokeDataOutput : List of lists of strings
-        List of lists containing string information of pokemon data to later display to user
+        A list containing sets of lists that contain data for each pokemon that met the user's search filter
     
     """
 
@@ -110,7 +111,7 @@ def findWithType(userSearch1 = "", userSearch2 = ""):
             # if we reached here, then that means the userSearch input was not found in pokedex database
             return [["not found"]] 
     
-#---------------------------------------  
+#*****************
 
     # if we get inside here, it means user is searching for Pokemon with only 1 type
     else:
@@ -152,17 +153,17 @@ def findWithType(userSearch1 = "", userSearch2 = ""):
 #----------------------------------------------------------------------------------------------------
 def findWithNdex(userSearch):
     
-    """ Spits out pokemon data paired to the inputted Pokemon Ndex (national index number)
+    """ Spits out pokemon data paired to the inputted Pokemon's Ndex (national index number)
     
     Parameters
     ----------
     userSearch : integer
-        String to determine what pokemon to search for in data set
+        Integer to determine what pokemon's national index number to search for in our database
     
     Returns
     -------
     pokeDataOutput : List of strings
-        List of string containing information of pokemon data to later display to user
+        List of strings containing data of the pokemon we were searching for
     
     """
     
