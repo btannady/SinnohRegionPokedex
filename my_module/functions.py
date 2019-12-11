@@ -58,88 +58,95 @@ def findWithType(userSearch1 = "", userSearch2 = ""):
     
     Returns
     -------
-    (doesn't return anything, void function; simply prints data corresponding to pokemon to the user)
+    pokeDataOutput : List of lists of strings
+        List of lists containing string information of pokemon data to later display to user
     
     """
-    
-    print("\n**********************************")
+
+    pokeDataOutput = [] # prepares the final output list to return
     
     # uses to tell whether or not we found the Pokemon
     pokeFound = False
     
     # if we get in here, it means user is searching for Pokemon with 2 types
     if userSearch2 != "":
-        tempList1 = [] # carries Pokemon that have at least userSearch1 type
-        for monster in pokedex:
-            for monsterType in monster.getPokeType(): 
-                if monsterType == userSearch1.lower():
-                    tempList1.append(monster)
-        for monster in tempList1:
-            for monsterType in monster.getPokeType(): 
-                if monsterType == userSearch2.lower():
-                # this is our final filtered list, now we can display for the user
-                    # display the pokemon name
-                    print("Pokémon: ", end = '')
-                    print(monster.getPokeName().capitalize())
+        
+        tempList1 = [] # use this list to hold Pokemon that have at least userSearch1 type
+        for monster in pokedex: # for each pokemon in database
+            for monsterType in monster.getPokeType(): # for each type of the current pokemon
+                if monsterType == userSearch1.lower(): # if the current pokemon has a type that matches userSearch1
+                    tempList1.append(monster) # add the pokemon onto our list of pokemon with at least userSearch1, tempList1
+                    
+        # now search thru the list of userSearch1 type pokemon, tempList1, for pokemon that are also userSearch2
+        for monster in tempList1: # for each pokemon in list of userSearch1 type pokemon, tempList1
+            for monsterType in monster.getPokeType():  # for each type of the current pokemon
+                if monsterType == userSearch2.lower(): # if the current pokemon has a type that matches userSearch2
+                    
+                # if we reach here, it means we found a pokemon that completely meets the search criteria
+                # we can now append this current pokemon set into our final filtered list, pokeDataOutput
+                
+                    # prepares a temporary list to hold the current pokemon's data, to append to pokeDataOutput
+                    somePokemonSet = []
+                
+                    # sets the first element of the somePokemonSet list to string of current pokemon's name
+                    somePokemonSet.append(monster.getPokeName().capitalize())
             
-                    # display the pokemon type(s)
-                    print("Type: ", end = '')
+                    # sets the second and third elements of the somePokemonSet list to strings of the current pokemon's types
                     for item in monster.getPokeType():
-                        print(item.capitalize() + " ", end = '')
-                    print("")
-                
-                    # display the pokemon Ndex    
-                    print("National Index: #", end = '')
-                    print(monster.getPokeNdex())
-                
-                    print("\n**********************************")
-                    pokeFound = True
+                        somePokemonSet.append(item.capitalize())
+                    
+                    # sets the fourth element of the somePokemonSet list to string of the current pokemon's Ndex  
+                    somePokemonSet.append(str(monster.getPokeNdex()))
+            
+                    # append the current somePokemonSet list into our final filtered list
+                    pokeDataOutput.append(somePokemonSet) 
+
+                    pokeFound = True # use this variable to later verify that we found at least one pokemon
                     
         # verifies whether we found the user's Pokemon
         if pokeFound:
-            return
-        
-        # if we reached here, then that means the userSearch input was not found in pokedex database
-        print("The Pokémon with type [" + userSearch1 + "] and [" + userSearch2 + "] were not found in the Pokédex database...")
-    
-        print("\n**********************************")
+            return pokeDataOutput
+        else:
+            # if we reached here, then that means the userSearch input was not found in pokedex database
+            return [["not found"]] 
     
 #---------------------------------------  
 
     # if we get inside here, it means user is searching for Pokemon with only 1 type
     else:
     
-        #displays the pokemon data
-        for monster in pokedex:
-            for monsterType in monster.getPokeType():
-                if monsterType == userSearch1.lower():
-            
-                    # display the pokemon name
-                    print("Pokémon: ", end = '')
-                    print(monster.getPokeName().capitalize())
-            
-                    # display the pokemon type(s)
-                    print("Type: ", end = '')
-                    commaCounter = len(monster.getPokeType())
-                    for item in monster.getPokeType():
-                        print(item.capitalize() + " ", end = '')
-                    print("")
-                
-                    # display the pokemon Ndex    
-                    print("National Index: #", end = '')
-                    print(monster.getPokeNdex())
+        # search thru the list for userSearch1 type pokemon
+        for monster in pokedex: # for each pokemon in database
+            for monsterType in monster.getPokeType(): # for each type of the current pokemon
+                if monsterType == userSearch1.lower(): # if the current pokemon has a type that matches userSearch1
                     
-                    print("\n**********************************")
+                # if we reach here, it means we found a pokemon that completely meets the search criteria
+                # we can now append this current pokemon set into our final filtered list, pokeDataOutput
+                
+                    # prepares a temporary list to hold the current pokemon's data, to append to pokeDataOutput
+                    somePokemonSet = []
+                    
+                    # sets the first element of the somePokemonSet list to string of current pokemon's name
+                    somePokemonSet.append(monster.getPokeName().capitalize())
+            
+                    # sets the second element of the somePokemonSet list to string of the current pokemon's type
+                    for item in monster.getPokeType():
+                        somePokemonSet.append(item.capitalize())
+                    
+                    # sets the third element of the somePokemonSet list to string of the current pokemon's Ndex   
+                    somePokemonSet.append(str(monster.getPokeNdex()))
+            
+                    # append the current somePokemonSet list into our final filtered list
+                    pokeDataOutput.append(somePokemonSet) 
+
                     pokeFound = True
         
         # verifies whether we found the user's Pokemon
         if pokeFound:
-            return
-        
-        # if we reached here, then that means the userSearch input was not found in pokedex database
-        print("The Pokémon with type [" + userSearch1 + "] was not found in the Pokédex database...")
-    
-        print("\n**********************************")
+            return pokeDataOutput
+        else:
+            # if we reached here, then that means the userSearch input was not found in pokedex database
+            return [["not found"]]
         
 
 #----------------------------------------------------------------------------------------------------
