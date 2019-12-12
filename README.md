@@ -5,14 +5,15 @@ This is my final programming project submission for my 'COGS 18: Intro to Python
 This program contains a built-in database of every single pokemon from the Sinnoh Region!
 Users are able to quickly and swiftly locate information on different pokemon within the database.
 
-The Sinnoh Region pokemon database this program refers to: https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_Sinnoh_Pok%C3%A9dex_number
-
 
 There are 3 kinds of search features offered by this Pokedex program:
   1. Search database by pokemon name - Enter a pokemon name as input, program will then display information on that pokemon.
   2. Search database by pokemon type - Enter a pokemon type(s) as input, program will then display information on related pokemon.
   3. Search database by pokemon ndex # - Enter a pokemon ndex as input, program will then display information on that pokemon.
 The fourth option offered is basically to just end the program.
+  
+  
+The Sinnoh Region pokemon database this program refers to: https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_Sinnoh_Pok%C3%A9dex_number
   
   
 Meeting the Grading Requirements:
