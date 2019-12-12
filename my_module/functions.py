@@ -1,7 +1,7 @@
 from my_module.pokemonObjects import * # import this file so we can use the database list of Pokemon objects, pokedex, to search
 
 
-# FUNCTION DEFINITIONS
+# FUNCTION DEFINITIONS; This file contains all of our functions
 
 #----------------------------------------------------------------------------------------------------
 def findWithName(userSearch):

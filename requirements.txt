@@ -1,7 +1,7 @@
 # If your project has any requirements not included in anaconda, include them here
 
 This program has a dependecy, it uses pygame to play a music file later on in the program.
-So you will need to add this pygame library in python through command prompt, 'pip install pygame'.
+You will need to add this pygame library in python through command prompt, 'pip install pygame'.
 
 Refer to the link: "https://pypi.org/project/Pygame/".
 
@@ -9,3 +9,6 @@ Refer to the link: "https://pypi.org/project/Pygame/".
 
 Other than that, all files can be found in my Github Repository for this project: 
        https://github.com/btannady/SinnohRegionPokedex
+       
+       
+For more information on the program overall, refer to the README.md file

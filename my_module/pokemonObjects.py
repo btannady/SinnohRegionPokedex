@@ -1,7 +1,9 @@
 from my_module.pokemonClass import Pokemon # import this file so we can use the Pokemon class to create objects for each pokemon
 
 
-""" This file is how we create all the pokemon objects in our database. 
+# OBJECTS; This file sets up all of our Pokemon objects, then puts them all into our database list, pokedex
+
+""" This file is responsible for creating all the pokemon objects in our database. 
     
 First we import the Pokemon class from the pokemonClass.py into this file (as shown above).
     

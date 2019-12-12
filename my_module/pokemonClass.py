@@ -1,4 +1,4 @@
-# CLASS DEFINITIONS
+# CLASS DEFINITIONS; This file contains our Pokemon class
 
 #----------------------------------------------------------------------------------------------------
 class Pokemon:
