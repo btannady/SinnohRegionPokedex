@@ -1,11 +1,11 @@
-from my_module.pokemonObjects import *
+from my_module.pokemonObjects import * # import this file so we can use the database list of Pokemon objects, pokedex, to search
 
 
 # FUNCTION DEFINITIONS
 
 #----------------------------------------------------------------------------------------------------
 def findWithName(userSearch):
-    
+
     """ Spits out pokemon data corresponding to the inputted Pokemon's name
     
     Parameters
@@ -25,7 +25,7 @@ def findWithName(userSearch):
     
     # appends the pokemon that fit the search criteria into our output list
     for monster in pokedex:
-        if monster.getPokeName() == userSearch.lower():
+        if monster.getPokeName() == str(userSearch).lower():
             
             # sets the first element of the list to string of pokemon name
             pokeDataOutput.append(monster.getPokeName().capitalize())
@@ -75,13 +75,13 @@ def findWithType(userSearch1 = "", userSearch2 = ""):
         tempList1 = [] # use this list to hold Pokemon that have at least userSearch1 type
         for monster in pokedex: # for each pokemon in database
             for monsterType in monster.getPokeType(): # for each type of the current pokemon
-                if monsterType == userSearch1.lower(): # if the current pokemon has a type that matches userSearch1
+                if monsterType == str(userSearch1).lower(): # if the current pokemon has a type that matches userSearch1
                     tempList1.append(monster) # add the pokemon onto our list of pokemon with at least userSearch1, tempList1
                     
         # now search thru the list of userSearch1 type pokemon, tempList1, for pokemon that are also userSearch2
         for monster in tempList1: # for each pokemon in list of userSearch1 type pokemon, tempList1
             for monsterType in monster.getPokeType():  # for each type of the current pokemon
-                if monsterType == userSearch2.lower(): # if the current pokemon has a type that matches userSearch2
+                if monsterType == str(userSearch2).lower(): # if the current pokemon has a type that matches userSearch2
                     
                 # if we reach here, it means we found a pokemon that completely meets the search criteria
                 # we can now append this current pokemon set into our final filtered list, pokeDataOutput
@@ -119,7 +119,7 @@ def findWithType(userSearch1 = "", userSearch2 = ""):
         # search thru the list for userSearch1 type pokemon
         for monster in pokedex: # for each pokemon in database
             for monsterType in monster.getPokeType(): # for each type of the current pokemon
-                if monsterType == userSearch1.lower(): # if the current pokemon has a type that matches userSearch1
+                if monsterType == str(userSearch1).lower(): # if the current pokemon has a type that matches userSearch1
                     
                 # if we reach here, it means we found a pokemon that completely meets the search criteria
                 # we can now append this current pokemon set into our final filtered list, pokeDataOutput

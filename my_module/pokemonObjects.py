@@ -1,6 +1,18 @@
 from my_module.pokemonClass import Pokemon # import this file so we can use the Pokemon class to create objects for each pokemon
 
 
+""" This file is how we create all the pokemon objects in our database. 
+    
+First we import the Pokemon class from the pokemonClass.py into this file (as shown above).
+    
+Next we create an object for each pokemon that exists using the imported Pokemon class to hold the data values.
+    
+After we have created all the Pokemon objects, we will add them all into one giant list, pokedex. 
+This pokedex list will hold all of our Pokemon objects and will be searched through later on in ProjectNotebook.ipynb
+
+"""
+
+
 # create our database of Pokemon by creating Pokemon objects of each pokemon (All the Sinnoh Region Pokemon)
 #----------------------------------------------------------------------------------------------------
 
