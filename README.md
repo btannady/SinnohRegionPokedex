@@ -14,7 +14,7 @@ The fourth option offered is basically to just end the program.
 The Sinnoh Region pokemon database this program refers to: https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_Sinnoh_Pok%C3%A9dex_number
   
   
-Meeting the Grading Requirements:
+This program contains several implementations:
 
     1 Jupyter notebook
         -ProjectNotebook.ipynb
