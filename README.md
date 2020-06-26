@@ -44,7 +44,7 @@ This program contains several implementations:
         -test_findWithNdex()
 
 
-TURN ON SOUND!:
+TURN ON SOUND! :
 
     - In my python project, I wanted to make my pokemon program feel more lively and inviting 
     (almost like a game), so I learned how to add background music from watching tutorials 
